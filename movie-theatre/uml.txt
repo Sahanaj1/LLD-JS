@@ -1,0 +1,88 @@
++-------------------+
+|      User         |
++-------------------+
+| - id: String      |
+| - name: String    |
+| - location: String|
++-------------------+
+| +setLocation()    |
++-------------------+
+
+           ▲
+           |
+           |
+           | uses
+           ▼
+
++--------------------+
+|     LocationService|
++--------------------+
+| - theatres: Theatre[] |
++------------------------+
+| +getTheatresByLocation(location: String): Theatre[] |
++------------------------+
+
++-------------------+
+|     Theatre       |
++-------------------+
+| - id: String      |
+| - name: String    |
+| - location: String|
+| - shows: Show[]   |
++-------------------+
+| +addShow(movie)   |
+| +getShowsByMovie(movieId): Show[] |
++-------------------+
+
++-------------------+
+|       Show        |
++-------------------+
+| - id: String      |
+| - movie: Movie    |
+| - startTime: Date |
+| - seats: Map      |
++-------------------+
+| +getAvailableSeats(): Seat[]  |
+| +bookSeats(seatNumbers: [])   |
+| +calculateTotalCost(seatNumbers: []): number |
++-------------------+
+
++-------------------+
+|      Movie        |
++-------------------+
+| - id: String      |
+| - title: String   |
+| - durationMs: Int |
++-------------------+
+
++------------------------+
+|        Booking         |
++------------------------+
+| - user: User           |
+| - show: Show           |
+| - seatNumbers: []      |
+| - bookingTime: Date    |
+| - price: Number        |
++------------------------+
+| +confirm()             |
++------------------------+
+
++---------------------------+
+|          Seat             |
++---------------------------+
+| - seatNumber: String      |
+| - type: SeatType          |
+| - price: Number           |
+| - isBooked: Boolean       |
++---------------------------+
+| +book()                   |
++---------------------------+
+
+<<enumeration>>
++-------------------+
+|    SeatType       |
++-------------------+
+| REGULAR           |
+| PREMIUM           |
+| RECLINER          |
++-------------------+

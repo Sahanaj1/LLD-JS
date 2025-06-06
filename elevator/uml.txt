@@ -1,0 +1,35 @@
++------------------+
+|     Elevator     |
++------------------+
+| - id             |
+| - currentFloor   |
+| - direction      |
+| - state          |
+| - targetFloors[] |
++------------------+
+| +move()          |
+| +addRequest(floor)|
++------------------+
+
++------------------+
+|     Request      |
++------------------+
+| - floorNumber    |
+| - direction      |
++------------------+
+
++--------------------------+
+|   ElevatorController     |
++--------------------------+
+| - elevators[]            |
++--------------------------+
+| +handleRequest(Request)  |
+| +stepAllElevators()      |
++--------------------------+
+
++------------------+
+|     Building     |
++------------------+
+| - controller     |
+| +requestElevator(floor, direction) |
++------------------+

@@ -1,0 +1,25 @@
+[BookingEntity] (abstract)
+    |
+    +-- [Theater]
+    |      - theaterName: string
+    |      - children: Screen[]
+    |      + addScreen(screen)
+    |      + display(indent)
+    |
+    +-- [Screen]
+    |      - screenName: string
+    |      - children: Show[]
+    |      + addShow(show)
+    |      + display(indent)
+    |
+    +-- [Show]
+    |      - showName: string
+    |      - children: Seat[]
+    |      + addSeat(seat)
+    |      + display(indent)
+    |
+    +-- [Seat]
+           - seatNumber: string
+           - isBooked: boolean
+           + display(indent)
+           + book(userId)  // concurrency simulated booking

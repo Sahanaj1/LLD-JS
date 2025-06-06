@@ -1,0 +1,51 @@
++-------------+
+|    Card     |
++-------------+
+| -cardNumber |
+| -pin        |
+| -account    |
++-------------+
+| +validatePin(pin) |
++-------------+
+
++-------------------+
+|   BankAccount     |
++-------------------+
+| -accountNumber    |
+| -balance          |
++-------------------+
+| +withdraw(amount) |
+| +deposit(amount)  |
+| +getBalance()     |
++-------------------+
+
++--------------------------+
+|  TransactionProcessor    |
++--------------------------+
+| +processWithdrawal()     |
+| +processDeposit()        |
++--------------------------+
+
++-------------------+
+|  CashDispenser    |
++-------------------+
+| -totalCash        |
++-------------------+
+| +dispense(amount) |
++-------------------+
+
++-----------------------------+
+|            ATM              |
++-----------------------------+
+| -card                       |
+| -account                    |
+| -transactionProcessor       |
+| -cashDispenser              |
++-----------------------------+
+| +insertCard(card)           |
+| +enterPin(pin)              |
+| +checkBalance()             |
+| +withdraw(amount)           |
+| +deposit(amount)            |
+| +ejectCard()                |
++-----------------------------+

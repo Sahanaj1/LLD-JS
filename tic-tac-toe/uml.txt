@@ -1,0 +1,33 @@
++-------------+
+|   Player    |
++-------------+
+| - name      |
+| - symbol    |
++-------------+
+| +getSymbol()|
+| +getName()  |
++-------------+
+
++-------------+
+|   Board     |
++-------------+
+| - grid[3][3]|
++-------------+
+| +printBoard()|
+| +makeMove(row, col, symbol) |
+| +isFull()    |
+| +checkWin(symbol) |
++-------------+
+
++-------------+
+|    Game     |
++-------------+
+| - player1   |
+| - player2   |
+| - board     |
+| - currentPlayer |
++-------------+
+| +playMove(row, col) |
+| +switchPlayer()     |
+| +start()            |
++-------------+

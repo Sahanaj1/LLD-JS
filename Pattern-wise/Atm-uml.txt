@@ -1,0 +1,12 @@
++-----------------------+
+|         ATM           |
++-----------------------+
+| -instance: ATM        |  <<static private>>
+| -cashAvailable: number|
+| -balance: number      |
++-----------------------+
+| +getInstance(): ATM   |  <<static>>
+| +withdraw(amount)     |
+| +deposit(amount)      |
+| +getBalance()         |
++-----------------------+

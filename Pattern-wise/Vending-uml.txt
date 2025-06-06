@@ -1,0 +1,21 @@
++---------------------------+
+|   VendingPaymentInterface|  <<Interface>>
+| + pay(amount): void      |
++---------------------------+
+             ▲
+             |
+   +-------------------+
+   | WalletAdapter     |  <<Adapter>>
+   | + pay(amount): void |
+   +-------------------+
+             |
+             v
++--------------------------+
+|  ThirdPartyWallet        |  <<Adaptee>>
+| + makePayment(amt): void|
++--------------------------+
+
++-------------------+
+|  VendingMachine   |
+| + purchaseItem()  |
++-------------------+
