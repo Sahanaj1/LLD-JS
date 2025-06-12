@@ -1,0 +1,23 @@
++------------------+
+|  VendingMachine  |
++------------------+
+| - state          |
+| - inventory      |
+| - balance        |
++------------------+
+| +setState(state) |
+| +insertMoney()   |
+| +selectItem()    |
+| +dispenseItem()  |
++------------------+
+
+            ▲
+            |
++-------------------+        +------------------+
+|     State         |<-------| Concrete States  |
++-------------------+        +------------------+
+| +insertMoney()    |        | IdleState        |
+| +selectItem()     |        | HasMoneyState    |
+| +dispenseItem()   |        | DispensingState  |
++-------------------+        | SoldOutState     |
+                             +------------------+

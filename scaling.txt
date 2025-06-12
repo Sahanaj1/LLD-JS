@@ -1,0 +1,10 @@
+Scale 0 to million users:
+1. Single server
+2. Appln & db server separation
+3. load balancer & multiple appln server
+4. db replication
+5. cache
+6. cdn
+7. data centre
+8. messaging queue
+9. db sharding & replication
